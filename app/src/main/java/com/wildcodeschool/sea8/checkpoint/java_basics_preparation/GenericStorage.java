@@ -4,17 +4,17 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class GenericStorage<I> {
-    List<ITPerson> persons = new ArrayList();
+    List<I> itcrowd = new ArrayList();
 
-    public boolean storePerson(ITPerson person) {
-        return persons.add(person);
+    public boolean storePerson(I person) {
+        return itcrowd.add(person);
     }
 
-    public ITPerson getLastStoredPerson() {
-        return persons.get(persons.size()-1);
+    public I getLastStoredPerson() {
+        return itcrowd.get(itcrowd.size()-1);
     }
 
-    public ITPerson getFirstStoredPerson() {
-        return persons.get(0);
+    public I getFirstStoredPerson() {
+        return itcrowd.get(0);
     }
 }
